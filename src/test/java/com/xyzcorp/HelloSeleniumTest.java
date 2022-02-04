@@ -12,11 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HelloSeleniumTest {
 
-    private ChromeDriver chromeDriver;
+    private static ChromeDriver chromeDriver;
 
     @BeforeAll 
-    public void setup(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\brejanth.rajendran\\chrome-drivers\\98\\chromedriver_win32\\chromedriver");
+    public static void setup(){
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\brejanth.rajendran\\chrome-drivers\\98\\chromedriver_win32\\chromedriver.exe");
         chromeDriver = new ChromeDriver();
 
     }
@@ -31,7 +31,7 @@ public class HelloSeleniumTest {
     } 
 
     @AfterAll
-    public void cleanup() {
+    public static void cleanup() {
         chromeDriver.close();
     }
     
